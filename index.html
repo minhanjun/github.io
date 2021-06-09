@@ -1,10 +1,12 @@
 <html>
-    <script>
-        const filters = [
-          {vendorId: 0x1209, productId: 0xa800},
-        ];
+    <body>
+        <button type="button" onclick="connect()"></button>
+    </body>
 
-        navigator.usb.requestDevice({filters: filters});
+    <script>
+        function connect() {
+            navigator.usb.requestDevice({filters: [{vendorId: 0x1209, productId: 0xa800}]});
+        }
 
     </script>
 </html>
